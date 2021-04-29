@@ -55,11 +55,10 @@ _defaults = {
 }
 ```
 3. 运行encoding.py，对face_dataset里面的图片进行编码，face_dataset的命名规则为XXX_1.jpg、XXX_2.jpg。最终在model_data文件夹下生成对应的数据库人脸编码数据文件。
-4. 运行predict.py，输入
+4. 运行predict.py，输入下述文字，可直接预测。
 ```python
 img/zhangxueyou.jpg
 ```  
-可直接预测。   
 5. 利用video.py可进行摄像头检测。  
 
 

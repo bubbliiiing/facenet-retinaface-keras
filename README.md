@@ -59,7 +59,7 @@ _defaults = {
 ```python
 img/zhangxueyou.jpg
 ```  
-可直接预测。
+可直接预测。   
 5. 利用video.py可进行摄像头检测。  
 
 

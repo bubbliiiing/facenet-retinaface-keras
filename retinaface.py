@@ -1,13 +1,6 @@
-import colorsys
-import os
-import pickle
-
 import cv2
-import keras
 import numpy as np
-from keras import backend as K
 from keras.applications.imagenet_utils import preprocess_input
-from keras.layers import Input
 from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
 
@@ -22,7 +15,7 @@ from utils.utils import (Alignment_1, BBoxUtility, compare_faces,
 def cv2ImgAddText(img, label, left, top, textColor=(255, 255, 255)):
     img = Image.fromarray(np.uint8(img))
     # 设置字体
-    font = ImageFont.truetype(font='font/simhei.ttf', size=20)
+    font = ImageFont.truetype(font='model_data/simhei.ttf', size=20)
 
     draw = ImageDraw.Draw(img)
     label = label.encode('utf-8')
@@ -253,9 +246,10 @@ class Retinaface(object):
             #----------------------#
             #   图像截取，人脸矫正
             #----------------------#
-            crop_img = np.array(old_image)[int(result[1]):int(result[3]), int(result[0]):int(result[2])]
-            landmark = np.reshape(result[5:],(5,2)) - np.array([int(result[0]),int(result[1])])
-            crop_img,_ = Alignment_1(crop_img,landmark)
+            result      = np.maximum(result, 0)
+            crop_img    = np.array(old_image)[int(result[1]):int(result[3]), int(result[0]):int(result[2])]
+            landmark    = np.reshape(result[5:],(5,2)) - np.array([int(result[0]),int(result[1])])
+            crop_img, _ = Alignment_1(crop_img,landmark)
 
             #----------------------#
             #   人脸编码

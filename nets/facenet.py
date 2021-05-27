@@ -1,13 +1,6 @@
-import os
-
-import keras
 import keras.backend as K
-import numpy as np
-from keras.layers import (Activation, Conv2D, Dense, Flatten, Input, Lambda,
-                          MaxPooling2D)
+from keras.layers import Activation, Dense, Input, Lambda
 from keras.models import Model
-from keras.optimizers import SGD
-from PIL import Image
 
 from nets.inception_resnetv1 import InceptionResNetV1
 from nets.mobilenet import MobileNet

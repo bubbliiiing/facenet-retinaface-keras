@@ -4,7 +4,6 @@ from functools import reduce
 import cv2
 import keras
 import numpy as np
-import tensorflow as tf
 from PIL import Image
 
 

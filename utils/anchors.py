@@ -1,6 +1,7 @@
-import numpy as np
-from math import ceil
 from itertools import product as product
+from math import ceil
+
+import numpy as np
 
 
 class Anchors(object):

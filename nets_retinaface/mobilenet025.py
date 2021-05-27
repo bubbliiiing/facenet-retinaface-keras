@@ -1,11 +1,7 @@
-import warnings
-
-import numpy as np
 from keras import backend as K
 from keras.layers import (Activation, BatchNormalization, Conv2D,
-                          DepthwiseConv2D, Dropout, GlobalAveragePooling2D,
-                          GlobalMaxPooling2D, Input, Reshape)
-from keras.models import Model
+                          DepthwiseConv2D)
+
 
 def relu6(x):
     return K.relu(x, max_value=6)

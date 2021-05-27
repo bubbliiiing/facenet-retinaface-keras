@@ -1,18 +1,8 @@
-import math
-
-import numpy as np
-import tensorflow as tf
-from keras import backend
 from keras import backend as K
-from keras.applications import imagenet_utils
-from keras.applications.imagenet_utils import decode_predictions
-from keras.layers import (Activation, Add, Conv2D, Dense, DepthwiseConv2D,
-                          Dropout, GlobalAveragePooling2D, GlobalMaxPooling2D,
-                          Input, Lambda, MaxPooling2D, ZeroPadding2D)
+from keras.layers import (Activation, Conv2D, Dense, DepthwiseConv2D, Dropout,
+                          GlobalAveragePooling2D)
 from keras.layers.normalization import BatchNormalization
 from keras.models import Model
-from keras.preprocessing import image
-from keras.utils.data_utils import get_file
 
 
 def _conv_block(inputs, filters, kernel=(3, 3), strides=(1, 1)):

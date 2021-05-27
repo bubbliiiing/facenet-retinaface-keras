@@ -1,6 +1,4 @@
-import keras.backend as K
-from keras.layers import (Activation, Add, Concatenate, Conv2D, Input,
-                          MaxPooling2D, Reshape, UpSampling2D, ZeroPadding2D)
+from keras.layers import Activation, Add, Concatenate, Conv2D, Input, Reshape
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.normalization import BatchNormalization
 from keras.models import Model

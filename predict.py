@@ -102,7 +102,7 @@ if __name__ == "__main__":
         cv2.destroyAllWindows()
 
     elif mode == "fps":
-        img = cv2.imread('img/street.jpg')
+        img = cv2.imread('img/obama.jpg')
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         tact_time = retinaface.get_FPS(img, test_interval)
         print(str(tact_time) + ' seconds, ' + str(1/tact_time) + 'FPS, @batch_size 1')
